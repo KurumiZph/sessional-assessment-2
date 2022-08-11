@@ -1,437 +1,166 @@
-@import url(fontawesome.css);
-@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    
+    <title>BlogSpace</title>
+</head>
+<body>
+    <header>
+      <!--Navigation-bar-->
+        <nav class="navbar navbar-default navbar-static-top" style="position: fixed; width: 100%;">
+          <div class="container">
+            <div class="navbar-header">
+              <img id="logo" src="assets/Logo.png" href="#">
+        
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <sapn class="icon-bar"></sapn>
+              </button>
+            </div>
+            <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+              <li><a href="#recent" class="nav-item">Recent</a></li>
+              <li><a href="#post-your-own" class="nav-item">Post Your Own</a></li>
+            </ul>
+          </div>
+        </nav>
+    </header>
 
-body{
-    background-image: url(assets/page-bg.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
-}
+      <!--Blogs-->
 
-#warning{
-  font-weight: 800;
-  color: white;
-  background-color: rgba(255, 0, 0, 0.247);
-  margin-left: 20px;
-  padding:2px;
-}
+      <div class="container" style="position:relative;">
+        <h2 class="recent" id="recent">- Latest Blogs -</h2>
+        <div id="my-container" style="display: flex; flex-wrap: wrap; height: 1000px;"></div>
+      </div>
 
-/* Nav-bar */
+      <!--Form-->
 
-.c1{
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    padding: 10px;
-    height: 50%;
-    max-height:100px;
-    background-color: #1e1e1e;
-    border-bottom: 2px solid white;;
-}
-.navbar-default{
-    background-color: #1e1e1e;
-}
+      <form id="post-your-own">
+        <div class="form">
+            <h3 style="text-align: center; color: white; margin-bottom: 80px;">&nbsp&nbsp - POST YOUR OWN BLOG -</h3>
+            <div class="right-content">
+            <div class="container">
+                <form id="contact" action="" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                    <fieldset>
+                        <input style="opacity: 100%;"
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Your name..."
+                        required=""
+                        />
+                    </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                    <fieldset>
+                        <input
+                        name="email"
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Your email..."
+                        required=""
+                        />
+                    </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                    <fieldset>
+                        <input
+                        name="subject"
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        placeholder="The Title..."
+                        required=""
+                        />
+                    </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                    <fieldset>
+                        <textarea
+                        name="message"
+                        type="blg"
+                        rows="6"
+                        class="form-control"
+                        id="message"
+                        placeholder="Start Writing Here..."
+                        required=""
+                        ></textarea>
+                    </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                    <fieldset>
+                        <button type="submit" id="form-submit" class="button">
+                        Post
+                        </button>
+                        <text id="warning">Warning: no Explicit/NSFW content is allowed. Once your blog is submitted, it cannot be deleted.</text>
+                    </fieldset>
+                    </div>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+      </form>
 
-.nav-link{
-    color:white;
-}
+      <!--Footer-->
 
-.nav-nfo{
-    color:white;
-    margin: 20px;
-}
+      <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">About us</div>
+              <p>but the majority have suffered alteration in some form, by injected humour,
+                or randomised words which don't look even slightly believable.
+                If you are going to use a passage of Lorem Ipsum.</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Contact us</div>
+              <div class="phone">
+                <a href="#"><i class="fas fa-phone-volume"></i>+91 1234567890</a>
+              </div>
+              <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic">Our Services</div>
+            <div><a href="#">Service 1 ..............</a></div>
+            <div><a href="#">Service 2 .............</a></div>
+            <div><a href="#">Service 3 .............</a></div>
+          </div>
+          <div class="right box">
+            <div class="topic">Subscribe us</div>
+            <form action="#">
+              <input type="text" placeholder="Enter email address">
+              <input type="submit" name="" value="Send">
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>Copyright © 2022 <a href="#">BlogSpace</a> All rights reserved</p>
+        </div>
+      </footer>
 
-.i1{
-    color: white;
-    position: relative;
-}
-
-.i2{
-    color: white;
-    text-align: center;
-}
-
-.nav-bar{
-    font-size: 20px;
-}
-
-.nav-item{
-    color:white !important
-}
-
-.form{
-    margin-top:17900px;
-    margin-bottom: 200px;
-}
-
-.post-date{
-    width: 100%;
-    text-align: center;
-    color: white;
-}
-
-input[type=text] {
-    margin: 5px;
-    padding:20px;
-    background-color: #1e1e1e;
-    border: 2px solid rgb(255, 255, 255);
-    color: white;
-    border-radius: 4px;
-}
-
-input[type=email] {
-    margin: 5px;
-    padding:20px;
-    background-color: #1e1e1e;
-    border: 2px solid rgb(255, 255, 255);
-    color: white;
-    border-radius: 4px;
-}
-
-textarea[type=blg] {
-    margin: 5px;
-    margin-bottom: 12px;
-    padding:20px;
-    background-color:#1e1e1e;
-    border: 2px solid rgb(255, 255, 255);
-    color: white;
-    border-radius: 4px;
-}
-
-.recent{
-    margin-top: 100px;
-    margin-bottom: 35px;
-    text-align: center;
-    color: white;
-}
-
-ul{
-    display: block;
-    float: left;
-    height: 100px;
-    list-style-type: none;
-    margin: 10px;
-}
-
-fieldset{
-    color: black !important
-}
-
-#logo{
-    margin-top: 10px;
-    width: 70%;
-    max-width: 55px;
-}
-
-#page-wraper {
-    background: url(../images/page-bg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-}
-
-.my-container{
-    width: 100%;
-}
-
-.blog-items{
-    padding-left: 15px;
-    background-color: rgba(0, 0, 0, 0.377);
-}
-
-.blog-title{
-    color: white;
-}
-
-.blog-body{
-    color:rgb(158, 158, 158)
-}
-
-.blog-rm{
-    text-decoration: none;
-    padding: 2px;
-    color: #fff;
-}
-
-.blog-rm:hover{
-    color: black;
-    background-color: #fff;
-    transition: 0.2s ease-out;
-}
-
-/* Basic */
-
-input,
-select,
-textarea {
-    outline: none;
-}
-
-a,
-a:hover {
-    text-decoration: none;
-}
-
-p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #fff;
-}
-
-h4 {
-    font-size: 26px;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 0.25px;
-}
-
-img {
-    width: 100%;
-    overflow: hidden;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-ul li {
-    display: inline-block;
-}
-
-.clearfix {
-    zoom: 1;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.container {
-    margin: 0 auto;
-}
-
-.main-nav {
-    text-align: center;
-}
-
-.main-nav li:last-child a {
-    border-bottom: 2px solid #fff;
-}
-
-.main-nav li {
-    display: block;
-}
-
-.main-nav li a {
-    height: 70px;
-    line-height: 70px;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    width: 100%;
-    transition: all 0.5s;
-    border-top: 2px solid #fff;
-}
-
-.main-nav li:hover a,
-.main-nav li.active a {
-    background: #fff;
-}
-
-/* Buttons */
-
-.white-button a {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #fff;
-    color: #1e1e1e;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: all 0.5s;
-}
-
-.white-button a:hover {
-    background-color: #fff;
-    color: #1e1e1e;
-}
-
-button {
-    margin-left: 5px;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1e1e1e;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: all 0.5s;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border: 2px solid #fff;
-}
-
-button:hover {
-    border: 2px solid #1e1e1e;
-    outline: none;
-    background-color: #fff;
-    color: #1e1e1e;
-}
-
-/* Footer */
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-  text-decoration: none;
-}
-footer{
-  position: fixed;
-  margin-bottom: -256px;
-  opacity: 40%;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #1e1e1e;
-}
-
-footer:hover{
-  transition: .3s ease-in-out;
-  opacity: 100%;
-  margin-bottom: 0px;
-}
-footer .content{
-  max-width: 1350px;
-  margin: auto;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-footer .content p,a{
-  color: #fff;
-}
-footer .content .box{
-  width: 33%;
-}
-footer .content .topic{
-  font-size: 22px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 16px;
-
-}
-footer .content p{
-  text-align: justify;
-}
-footer .content .lower .topic{
-  margin: 24px 0 5px 0;
-}
-footer .content .lower i{
-  padding-right: 16px;
-}
-footer .content .middle{
-  padding-left: 80px;
-}
-footer .content .middle a{
-  line-height: 32px;
-}
-footer .content .right input[type="text"]{
-  height: 45px;
-  width: 100%;
-  outline: none;
-  color: #d9d9d9;
-  background: #414141;
-  border-radius: 5px;
-  padding-left: 10px;
-  font-size: 17px;
-  border: 2px solid #1e1e1e;
-}
-footer .content .right input[type="submit"]{
-  height: 42px;
-  width: 100%;
-  font-size: 18px;
-  color: #d9d9d9;
-  background: #1e1e1e;
-  outline: none;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  margin-top: 12px;
-  border: 2px solid #fff;
-}
-.content .right input[type="submit"]:hover{
-  background: none;
-  color:  #fff;
-}
-footer .content .media-icons a{
-  font-size: 16px;
-  height: 45px;
-  width: 45px;
-  display: inline-block;
-  text-align: center;
-  line-height: 43px;
-  border-radius: 5px;
-  border: 2px solid #1e1e1e;
-  margin: 30px 5px 0 0;
-}
-.content .media-icons a:hover{
-  border-color: #fff;
-}
-footer .bottom{
-  width: 100%;
-  text-align: right;
-  color: #d9d9d9;
-  padding: 0 40px 5px 0;
-}
-footer .bottom a{
-  color: #fff;
-}
-
-footer a:hover{
-  color: #a38680;
-}
-@media (max-width:1100px) {
-  footer .content .middle{
-    padding-left: 50px;
-  }
-}
-@media (max-width:950px){
-  footer .content .box{
-    width: 50%;
-  }
-  .content .right{
-    margin-top: 40px;
-  }
-}
-@media (max-width:560px){
-  footer{
-    position: relative;
-  }
-  footer .content .box{
-    width: 100%;
-    margin-top: 30px;
-  }
-  footer .content .middle{
-    padding-left: 0;
-  }
-}
+    <script src="./scripts.js"></script>
+</body>
+</html>
