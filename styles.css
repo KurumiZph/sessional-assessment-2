@@ -11,6 +11,14 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+#warning{
+  font-weight: 800;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.247);
+  margin-left: 20px;
+  padding:2px;
+}
+
 /* Nav-bar */
 
 .c1{
@@ -55,7 +63,8 @@ body{
 }
 
 .form{
-    margin-top:50px;
+    margin-top:17900px;
+    margin-bottom: 200px;
 }
 
 .post-date{
@@ -109,15 +118,6 @@ ul{
 
 fieldset{
     color: black !important
-}
-
-.footer{
-    border-top: 2px solid white;
-    background-color: #1e1e1e;
-    width: 100%;
-    height: 300px;
-    position: fixed;
-    bottom: 0px;
 }
 
 #logo{
@@ -305,12 +305,19 @@ button:hover {
   text-decoration: none;
 }
 footer{
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  margin-bottom: -256px;
+  opacity: 40%;
   width: 100%;
   bottom: 0;
   left: 0;
   background-color: #1e1e1e;
+}
+
+footer:hover{
+  transition: .3s ease-in-out;
+  opacity: 100%;
+  margin-bottom: 0px;
 }
 footer .content{
   max-width: 1350px;
